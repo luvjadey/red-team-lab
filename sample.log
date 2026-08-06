@@ -1,0 +1,5 @@
+2024-08-06 10:15:32 | ERROR | auth-service | Login failed for user admin
+2024-08-06 10:15:45 | WARN | api-gateway | High latency detected
+2024-08-06 10:16:01 | INFO | database | Connection pool at 80%
+2024-08-06 10:16:15 | ERROR | worker | Task processing failed
+2024-08-06 10:16:30 | INFO | scheduler | Daily backup complete
