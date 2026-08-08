@@ -1,0 +1,41 @@
+# Red Team Lab + Dev Workflow Bootcamp
+
+Security engineering project combining offensive/defensive operations with basic production SDLC practices.
+
+## Setup
+
+Needs Python 3, no dependencies. Run from the repo root:
+
+```bash
+python scripts/log_parser.py       # parse sample.log
+python tests/test_log_parser.py    # run tests
+```
+
+## Parts
+- Part 1: Dev environment + AI tools — in progress
+- Part 2: SDLC + PR discipline — in progress
+- Part 3: Attack chain automation — not started
+- Part 4: Detection engineering — not started
+
+## Progress so far
+
+**Log parser** (`scripts/log_parser.py`) — reads pipe-delimited logs
+(`timestamp | level | source | message`) and turns each line into a dict.
+Skips lines that don't have all four fields and handles a missing file.
+
+**Sample data** (`sample.log`) — five log lines across ERROR/WARN/INFO from a
+few different services, used for testing the parser.
+
+**Tests** (`tests/test_log_parser.py`) — one test checking that a log line
+parses into the right level and source. Plain Python, no test framework.
+
+**Contribution guide** (`CONTRIBUTING.md`) — my pre-merge review checklist
+covering security, code quality, testing, docs, and branching.
+
+**Git workflow** — practicing feature branch → PR → `dev` → `main`. Five PRs
+merged so far.
+
+## Next up
+- Have the test import the parser instead of copying the function
+- Cover `parse_logs`, bad lines, and missing files
+- Add filtering/aggregation before starting detection work
